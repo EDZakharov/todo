@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import TodoMain from "./TodoMain";
-import {addTodo, dellTodo} from "../../redux/redux";
+import {addTodo, dellTodo, loadLocalList} from "../../redux/redux";
 
 let mapStateToProps = (state) => {
     return {
@@ -9,4 +9,4 @@ let mapStateToProps = (state) => {
 }
 
 
-export let TodoMainContainer = connect(mapStateToProps,{addTodo,dellTodo})(TodoMain)
+export let TodoMainContainer = connect(mapStateToProps,{addTodo,dellTodo,loadLocalList})(TodoMain)

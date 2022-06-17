@@ -1,24 +1,71 @@
 .main {
-  background-color: #1c214b; }
+  background-color: #1c214b;
+  margin-bottom: 50px;
+  border-radius: 0 0 35px 35px;
+  overflow: hidden; }
   .main .showOrHide {
     font-size: 25px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     user-select: none;
     cursor: pointer;
-    height: 60px;
-    transition: background-color 0.5s ease;
-    color: #acacac;
-    background-color: rgba(35, 32, 32, 0); }
+    transition: .3s;
+    color: #acacac; }
     .main .showOrHide:hover {
       background-color: rgba(33, 33, 33, 0.43);
-      transition: .5s color;
+      transition: .3s;
       color: white; }
-  .main .form i {
-    font-size: 20px;
-    color: #acacac; }
-    .main .form i:hover {
-      color: white; }
+    .main .showOrHide i:hover {
+      color: white;
+      transition: .5s; }
+  .main .inputForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; }
+    .main .inputForm .form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: opacity .7s;
+      position: relative; }
+      .main .inputForm .form input {
+        opacity: 1;
+        padding: 8px;
+        width: 300px;
+        transition: .1s;
+        outline-offset: 0;
+        border: none; }
+        .main .inputForm .form input:focus {
+          outline-offset: 3px;
+          transition: .1s; }
+        @media screen and (max-width: 600px) {
+          .main .inputForm .form input {
+            width: 200px; } }
+        @media screen and (max-width: 350px) {
+          .main .inputForm .form input {
+            width: 140px; } }
+      .main .inputForm .form i {
+        position: absolute;
+        right: -32px;
+        font-size: 25px;
+        cursor: pointer;
+        color: #acacac;
+        transition: .5s; }
+        .main .inputForm .form i:hover {
+          color: white;
+          transition: .5s; }
+@keyframes opacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+    .main .inputForm .taskList {
+      box-sizing: border-box;
+      padding: 20px 20px 30px;
+      width: 100%; }
 
 /*# sourceMappingURL=TodoMain.module.css.map */

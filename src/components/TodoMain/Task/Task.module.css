@@ -1,4 +1,51 @@
 .task {
-  color: white; }
+  color: white;
+  display: grid;
+  word-break: break-word;
+  white-space: pre-wrap;
+  width: 100%;
+  grid-template-columns: 1fr 15fr;
+  align-items: center;
+  position: relative;
+  opacity: 1;
+  animation: opacity .7s;
+  margin: 20px 0; }
+  @media screen and (min-width: 1224px) {
+    .task {
+      grid-template-columns: 1fr 25fr; } }
+  @media screen and (max-width: 1224px) {
+    .task {
+      grid-template-columns: 1fr 15fr; } }
+  @media screen and (max-width: 600px) {
+    .task {
+      grid-template-columns: 1fr 8fr; } }
+  .task i {
+    cursor: pointer; }
+  .task .index {
+    align-self: start;
+    user-select: none; }
+  .task .time {
+    position: absolute;
+    font-size: 10px;
+    top: 0;
+    right: 20px;
+    user-select: none; }
+  .task .text {
+    margin-right: 65px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    transition: .3s;
+    padding: 0 0 4px 0; }
+    .task .text:hover {
+      transition: .7s;
+      border-bottom: 2px solid white; }
+  .task .box {
+    position: absolute;
+    align-self: start;
+    right: 0; }
+@keyframes opacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /*# sourceMappingURL=Task.module.css.map */
