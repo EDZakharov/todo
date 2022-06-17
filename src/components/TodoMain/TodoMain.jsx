@@ -41,7 +41,6 @@ const TodoMain = ({tasks, addTodo, dellTodo, loadLocalList}) => {
                 {!taskList
                     ? <i className="fa-regular fa-eye"/>
                     : <i className="fa-solid fa-eye-slash"/>}
-                    123
             </div>
             {taskList
                 ? <div className={style.inputForm}>

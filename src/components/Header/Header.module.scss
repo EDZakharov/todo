@@ -9,4 +9,24 @@
   height: 100px;
   user-select: none;
   font-size: 25px;
+  position: relative;
+
+  a{
+    color: #acacac;
+
+    span{
+      position: absolute;
+      bottom: 5px;
+      right: 10px;
+      font-style: initial;
+      font-size: 10px;
+      transition: .5s;
+      &:hover{
+        transition: .5s;
+        color:white;
+      }
+    }
+
+  }
+
 }
