@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,KAAK;EACH,KAAK,EAAE,KAAK",
+"sources": ["Task.module.scss"],
+"names": [],
+"file": "Task.module.css"
+}
