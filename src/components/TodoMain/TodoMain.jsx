@@ -7,12 +7,14 @@ const TodoMain = ({tasks, addTodo, dellTodo, loadLocalList}) => {
     const [taskList, setTaskList] = useState(false)
     const [value, SetValue] = useState('')
 
-    useEffect(()=>{
-        if(tasks.todo.length === 0 && JSON.parse(localStorage.getItem('localSaved')).length !== 0){
+    useEffect(() => {
+        if (localStorage.getItem('localSaved') !== null
+            && tasks.todo.length === 0
+            && JSON.parse(localStorage.getItem('localSaved')).length !== 0) {
             loadLocalList(JSON.parse(localStorage.getItem('localSaved')))
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[tasks.todo])
+    }, [tasks.todo])
 
 
     let date = new Date()
@@ -22,7 +24,7 @@ const TodoMain = ({tasks, addTodo, dellTodo, loadLocalList}) => {
             dd = ('0' + date.getDate()).slice(-2),
             hh = ('0' + date.getHours()).slice(-2),
             min = ('0' + date.getMinutes()).slice(-2)
-            // sec = ('0' + date.getSeconds()).slice(-2)
+        // sec = ('0' + date.getSeconds()).slice(-2)
         return dd + '.' + mm + '.' + yyyy + '\n' + hh + ':' + min
     }
 
@@ -35,9 +37,9 @@ const TodoMain = ({tasks, addTodo, dellTodo, loadLocalList}) => {
     return (
         <main className={style.main}>
             <div className={style.showOrHide}
-                onClick={() => {
-                    setTaskList(!taskList)
-                }}>
+                 onClick={() => {
+                     setTaskList(!taskList)
+                 }}>
                 {!taskList
                     ? <i className="fa-regular fa-eye"/>
                     : <i className="fa-solid fa-eye-slash"/>}
@@ -46,7 +48,7 @@ const TodoMain = ({tasks, addTodo, dellTodo, loadLocalList}) => {
                 ? <div className={style.inputForm}>
                     <form>
                         <div className={style.form}>
-                            <input placeholder={'Enter your task'} value={value} onKeyPress={e =>{
+                            <input placeholder={'Enter your task'} value={value} onKeyPress={e => {
                                 if (e.code === 'Enter') {
                                     e.preventDefault()
 

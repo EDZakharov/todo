@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={
+            <Route path="*" element={
                 <div className='container'>
                 <Header/>
                 <TodoMainContainer/>
